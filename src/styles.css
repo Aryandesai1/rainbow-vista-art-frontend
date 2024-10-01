@@ -1,0 +1,338 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #1c1c1c;
+  color: #f4f4f4;
+}
+
+header {
+  background-color: #2c2c2c;
+  padding: 20px; /* Increased padding for better spacing */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-size: large;
+}
+
+header img {
+  height: 100px; /* Reduced size to balance the header */
+}
+
+nav a {
+  color: #f4f4f4;
+  margin: 0 20px; /* Increased spacing between navigation links */
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #ff9800;
+}
+
+.banner {
+  position: relative;
+  height: 450px; /* Slightly increased height for more visual space */
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+  background: linear-gradient(45deg, #ff4757, #ffa502, #fffa65, #2ed573, #1e90ff, #5352ed);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.banner .carousel img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.banner .carousel img.active {
+  opacity: 1;
+}
+
+.banner h1 {
+  position: relative;
+  z-index: 10;
+  font-size: 3.5em; /* Increased font size for emphasis */
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+  margin: 0;
+  padding-top: 120px; /* Adjusted to balance the banner */
+}
+
+.content {
+  padding: 60px 30px; /* Increased padding for better spacing */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section {
+  margin-bottom: 80px; /* Increased margin between sections */
+  padding: 30px; /* Increased padding for more space inside sections */
+  background-color: #2c2c2c;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section img {
+  max-width: 100%;
+  height: auto;
+  padding: 10px 0; /* Added padding around images for better spacing */
+}
+
+.section h2 {
+  font-size: 2.8em; /* Slightly increased heading size */
+  color: #ff9800;
+  margin-bottom: 25px; /* Added more space below the heading */
+}
+
+.section h3 {
+  font-size: 20px;
+  margin: 20px 0; /* Adjusted to improve space between subheadings */
+}
+
+.section p, .section a {
+  font-size: 20px;
+  line-height: 1.8;
+  margin-bottom: 20px; /* Added margin below paragraphs and links */
+}
+
+#contact-us {
+  color: #ff9800;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.show h3, .show p {
+  padding: 10px; /* Reduced padding for better alignment */
+}
+
+.section a {
+  color: #ff9800;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.section a:hover {
+  color: #e67e22;
+}
+
+.show {
+  display: flex;
+  align-items: center;
+  background-color: #3c3c3c;
+  padding: 30px; /* Increased padding for larger clickable area */
+  margin: 20px 0; /* Added consistent margin around each show block */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.show:hover {
+  transform: scale(1.05);
+}
+
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  padding: 20px; /* Increased padding for larger inputs */
+  margin: 15px 0; /* Increased margin between input fields */
+  border: 1px solid #555;
+  border-radius: 8px;
+  background-color: #2c2c2c;
+  color: #f4f4f4;
+}
+
+.contact-form button {
+  padding: 20px 40px; /* Increased padding for a larger button */
+  background-color: #ff9800;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.4em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #e67e22;
+}
+
+footer {
+  background-color: #2c2c2c;
+  text-align: center;
+  padding: 30px; /* Increased padding for more space in the footer */
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+}
+
+footer p {
+  margin: 10px 0; /* Increased spacing between footer paragraphs */
+  color: #f4f4f4;
+}
+
+footer a {
+  color: #ff9800;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+footer a:hover {
+  color: #e67e22;
+}
+/* Mobile styles (for smaller screens) */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column; /* Stack the logo and navigation vertically */
+    text-align: center;
+    padding: 10px;
+  }
+
+  header img {
+    height: 80px; /* Adjust logo size for mobile */
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column; /* Stack nav links vertically */
+  }
+
+  nav a {
+    margin: 10px 0; /* Add more space between links */
+  }
+
+  .banner {
+    height: 300px; /* Decrease banner height for smaller screens */
+  }
+
+  .banner h1 {
+    font-size: 2em; /* Decrease heading size */
+    padding-top: 80px; /* Adjust padding */
+  }
+
+  .content {
+    padding: 20px; /* Reduce padding for smaller screens */
+  }
+
+  .section h2 {
+    font-size: 2em; /* Reduce heading size */
+  }
+
+  .section p, .section a {
+    font-size: 1em; /* Reduce text size */
+  }
+
+  .show {
+    flex-direction: column; /* Stack items vertically */
+    padding: 20px;
+  }
+
+  .contact-form input, .contact-form textarea {
+    padding: 15px; /* Slightly reduce padding */
+  }
+
+  .contact-form button {
+    width: 100%; /* Make the button full width */
+    padding: 15px;
+    font-size: 1.2em;
+  }
+
+  footer {
+    padding: 20px; /* Adjust footer padding */
+  }
+}
+
+@media (max-width: 480px) {
+  .banner h1 {
+    font-size: 1.8em; /* Further reduce heading size for very small screens */
+    padding-top: 50px;
+  }
+
+  .section h2 {
+    font-size: 1.8em;
+  }
+
+  .section p, .section a {
+    font-size: 0.9em; /* Make text even smaller for very small screens */
+  }
+
+  .show {
+    padding: 15px;
+  }
+
+  .contact-form input, .contact-form textarea {
+    padding: 10px;
+  }
+}
+/* Contact Form Styling */
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #2c2c2c;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #555;
+  border-radius: 5px;
+  background-color: #1c1c1c;
+  color: #f4f4f4;
+  font-size: 1.1em;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+  color: #888;
+}
+
+form textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+form button {
+  width: 100%;
+  padding: 15px;
+  background-color: #ff9800;
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background-color: #e67e22;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  form {
+    padding: 15px;
+  }
+
+  form button {
+    font-size: 1.1em;
+  }
+}
